@@ -38,23 +38,23 @@ public class playerHit : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D player)
     {
 
-        if (counter == 1)
-        {
-            Destroy(GameObject.FindWithTag("health1"));
-        }
-        if (counter == 2)
-        {
-            Destroy(GameObject.FindWithTag("health2"));
-        }
-        if (counter == 3)
-        {
-            Destroy(GameObject.FindWithTag("health3"));
-            GameObject.FindWithTag("Player").SetActive(false);
-            button.SetActive(true);
-            Time.timeScale = 0;
-        }
-
         counter++;
+       if (counter == 1)
+       {
+           Destroy(GameObject.FindWithTag("health1"));
+       }
+       if (counter == 2)
+       {
+           Destroy(GameObject.FindWithTag("health2"));
+       }
+       if (counter == 3)
+       {
+           Destroy(GameObject.FindWithTag("health3"));
+           GameObject.FindWithTag("Player").SetActive(false);
+           button.SetActive(true);
+           Time.timeScale = 0;
+       }
+
     }
 
 }
